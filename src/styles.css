@@ -36,17 +36,30 @@ h2 {
 
 .btn {
   margin: 1rem;
-  border: 0.2rem solid var(--light-pink);
+  box-shadow: 3px 5px var(--light-pink);
   border-radius: 15px;
   padding: 10px 28px;
   font-size: 18px;
   background-color: var(--maroon);
-  color: var(--light-pink);
+  color: white;
+}
+
+@media only screen and (max-width: 450px) {
+  .btn {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  .btn {
+    margin: 9px;
+  }
 }
 
 ul {
   padding-inline-start: 0;
 }
+
 li {
   display: flex;
   justify-content: center;
@@ -58,24 +71,72 @@ li {
 
 img {
   min-height: 150px;
-  width: 150px;
+  max-width: 100%;
   object-fit: fill;
   padding: 1rem 0rem 1rem 1rem;
   float: left;
   margin-right: 1rem;
 }
 
+@media only screen and (max-width: 500px) {
+  img {
+    min-height: 253px;
+    padding: 2rem 0rem 2rem 1rem;
+  }
+}
+
+.img {
+  width: 150px;
+  flex: 0 0 150px;
+  padding-top: 15px;
+}
+
 .content {
   background-color: var(--maroon);
   padding: "0rem 1rem";
   max-width: 900px;
+  height: auto;
   margin: auto;
   text-align: left;
   border-radius: 20px;
   float: right;
 }
 
+.content h2 {
+  color: white;
+}
+
+.rating {
+  font-weight: bolder;
+  color: var(--light-pink);
+}
+
+@media only screen and (max-width: 903px) {
+  .content {
+    margin: 18px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .details {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  .details {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .details {
+    font-size: 15px;
+  }
+}
+
 .content p {
   margin: 0rem 1rem;
   margin-bottom: 1rem;
 }
+
