@@ -63,7 +63,7 @@ const webSeriesDB = {
       Image:
         "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Scam_1992_poster.png/250px-Scam_1992_poster.png",
       Description:
-        "Set in 1980's & 90's Bombay, Scam 1992 follows the life of Harshad Mehta - a stockbroker who single-handedly took the stock market to dizzying heights & his catastrophic downfall.",
+        "Scam 1992 follows life of Harshad Mehta,stockbroker who single-handedly took the stock market to dizzying heights & his catastrophic downfall.",
       Rating: `9.5/10`
     },
     {
@@ -89,14 +89,12 @@ const webSeriesList = Object.keys(webSeriesDB);
 
 export default function App() {
   const [selectedGenre, setGenre] = useState("Crime");
-
   function clickHandler(genre) {
     setGenre(genre);
   }
-  
   return (
     <div className="App">
-      <h1> 📺 Web Series</h1>
+      <h1> <span>📺</span> Web Series</h1>
       <h2>Select the genre according to your interest</h2>
 
       {webSeriesList.map((genre) => (
@@ -114,18 +112,17 @@ export default function App() {
         {webSeriesDB[selectedGenre].map((webSeries) => (
           <li>
             <div className="content">
-              <img src={webSeries.Image} alt="web series poster" />
-
-              <div classname="details">
+              <div class="img">
+                <img src={webSeries.Image} alt="web series poster" />
+              </div>
+              <div className="details">
                 <h2> {webSeries.Title} </h2>
                 <p> {webSeries.Description} </p>
-                <p> {webSeries.Rating} </p>
+                <p class = "rating"> {webSeries.Rating} </p>
               </div>
-
             </div>
           </li>
         ))}
-        
       </ul>
     </div>
   );
