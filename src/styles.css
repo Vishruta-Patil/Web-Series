@@ -36,6 +36,7 @@ h2 {
 
 .btn {
   margin: 1rem;
+  border: 0.2rem so;
   box-shadow: 3px 5px var(--light-pink);
   border-radius: 15px;
   padding: 10px 28px;
@@ -78,7 +79,7 @@ img {
   margin-right: 1rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 420px) {
   img {
     min-height: 253px;
     padding: 2rem 0rem 2rem 1rem;
@@ -100,6 +101,14 @@ img {
   text-align: left;
   border-radius: 20px;
   float: right;
+  display: flex;
+}
+
+@media only screen and (max-width: 360px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .content h2 {
@@ -109,6 +118,16 @@ img {
 .rating {
   font-weight: bolder;
   color: var(--light-pink);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.details h2 {
+  padding-left: 20px;
 }
 
 @media only screen and (max-width: 903px) {
@@ -140,3 +159,19 @@ img {
   margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 380px) {
+  img {
+    min-height: 140px;
+    margin: auto;
+    display: block;
+  }
+  .img {
+    margin: auto;
+  }
+  .card-img {
+    padding-bottom: 0;
+  }
+  .details {
+    text-align: center;
+  }
+}
