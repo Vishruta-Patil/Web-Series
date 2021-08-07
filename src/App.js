@@ -94,7 +94,13 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1> <span>📺</span> Web Series</h1>
+      <h1>
+        {" "}
+        <span role="img" aria-label="emoji">
+          📺
+        </span>{" "}
+        Web Series
+      </h1>
       <h2>Select the genre according to your interest</h2>
 
       {webSeriesList.map((genre) => (
@@ -113,12 +119,16 @@ export default function App() {
           <li>
             <div className="content">
               <div class="img">
-                <img src={webSeries.Image} alt="web series poster" />
+                <img
+                  class="card-img"
+                  src={webSeries.Image}
+                  alt="web series poster"
+                />
               </div>
               <div className="details">
                 <h2> {webSeries.Title} </h2>
                 <p> {webSeries.Description} </p>
-                <p class = "rating"> {webSeries.Rating} </p>
+                <p class="rating"> {webSeries.Rating} </p>
               </div>
             </div>
           </li>
